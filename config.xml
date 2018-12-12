@@ -1,0 +1,122 @@
+<?xml version="1.2" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id = "it.cuartoReyVolatil.APPLICATION"
+		version = "0.1.2"
+		versionCode = "1">
+
+	<name>Cuarto Rey</name>
+
+	<description>
+		Cuarto Rey by Volatil
+	</description>
+
+	<author href="http://volatil.cl" email="contacto@volatil.cl">
+		Paulo Torrealba
+	</author>
+		
+	<!-- ICONS -->
+		
+	<icon src="icon.jpg" /> <!-- default 72 pixels -->
+	
+	<!-- iPhone 3G, 3GS, iPod Touch 2G, 3G -->
+	<!-- <icon src="imagenes/icons/ios/icon57.jpg" gap:platform="ios" width="57" height="57" />  -->
+	<!-- iPad 1, 2, iPad mini -->
+	<!-- <icon src="imagenes/icons/ios/icon72.jpg" gap:platform="ios" width="72" height="72" />  -->
+	<!-- iPhone 4, 4S, iPod Touch 4G -->
+	<!-- <icon src="imagenes/icons/ios/icon114.jpg" gap:platform="ios" width="114" height="114" />  -->
+	<!-- iPad 3, 4 -->
+	<!-- <icon src="imagenes/icons/ios/icon144.jpg" gap:platform="ios" width="144" height="144" />  -->
+		
+	<!-- 36 pixels -->
+	<icon src="imagenes/icons/android/ldpi.jpg" gap:platform="android" gap:density="ldpi" /> 
+	<!-- 48 pixels -->
+	<icon src="imagenes/icons/android/mdpi.jpg" gap:platform="android" gap:density="mdpi" /> 
+	<!-- 72 pixels -->
+	<icon src="imagenes/icons/android/hdpi.jpg" gap:platform="android" gap:density="hdpi" /> 
+	<!-- 96 pixels -->
+	<icon src="imagenes/icons/android/xhdpi.jpg" gap:platform="android" gap:density="xhdpi" /> 
+		
+	<!-- SPLASH SCREENS -->
+		
+	<gap:splash src="splash.png" /> <!-- default 320x480 pixels -->
+		
+	<!-- iPhone 3G, 3GS, iPod Touch 2, 3 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash320x480.png" gap:platform="ios" width="320" height="480" />  -->
+	<!-- iPhone 4, 4S, iPod Touch 4 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash640x960.png" gap:platform="ios" width="640" height="960" />  -->
+	<!-- iPhone 5, iPod Touch 5 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash640x1136.png" gap:platform="ios" width="640" height="1136" />  -->
+	<!-- iPad 1, 2, iPad mini 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash1024x768.png" gap:platform="ios" width="1024" height="768" />  -->
+	<!-- iPad 1, 2, iPad mini 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash768x1024.png" gap:platform="ios" width="768" height="1024" />  -->
+	<!-- iPad 3, 4 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash2048x1496.png" gap:platform="ios" width="2048" height="1496" />  -->
+	<!-- iPad 3, 4 	-->
+	<!-- <gap:splash src="imagenes/splash/ios/splash1536x2008.png" gap:platform="ios" width="1536" height="2008" />  -->
+		
+	<!-- 200x320 -->
+	<gap:splash src="imagenes/splash/android/ldpi.jpg" gap:platform="android" gap:density="ldpi" /> 
+	<!-- 320x480 -->
+	<gap:splash src="imagenes/splash/android/mdpi.jpg" gap:platform="android" gap:density="mdpi" /> 
+	<!-- 480x800 -->
+	<gap:splash src="imagenes/splash/android/hdpi.jpg" gap:platform="android" gap:density="hdpi" /> 
+	<!-- 720x1280 -->
+	<gap:splash src="imagenes/splash/android/xhdpi.jpg" gap:platform="android" gap:density="xhdpi" /> 
+		
+	<!-- BlackBerry 250x250 -->
+	<!-- <gap:splash src="imagenes/splash/bb/splash.png" gap:platform="blackberry" />  -->
+		
+	<!-- Windows Phone 7 480x800 -->
+	<!-- <gap:splash src="imagenes/splash/winphone/splash.png" gap:platform="winphone" />  -->
+		
+	<!-- WebOS 64x64 -->
+	<!-- <gap:splash src="imagenes/splash/webos/splash.png" gap:platform="webos" />  -->
+		
+	<!-- GENERAL PREFERENCES -->
+		
+	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name="orientation" value="default" />
+	<preference name="target-device" value="universal" />
+	<preference name="fullscreen" value="true" /> <!-- remove the upper bar on iOS and Android -->
+		
+	<!-- iOS PREFERENCES -->
+		
+	<preference name="webviewbounce" value="false" />
+	<preference name="prerendered-icon" value="true" />
+	<preference name="stay-in-webview" value="false" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
+	<preference name="detect-data-types" value="false" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="show-splash-screen-spinner" value="false" />
+	<preference name="auto-hide-splash-screen" value="true" /> <!-- if set to false, the splash screen must be hidden using a JavaScript API -->
+		
+	<!-- ANDROID PREFERENCES -->
+		
+	<!-- <preference name="android-minSdkVersion" value="7" />  minimum Android 2.1 -->
+	<preference name="android-minSdkVersion" value="15" />
+	<!-- <preference name="android-maxSdkVersion" value="17" /> maximum Android 4.2 -->
+	<preference name="android-installLocation" value="auto" />
+	<preference name="splash-screen-duration" value="5000" />
+	<preference name="load-url-timeout" value="20000" />
+		
+	<!-- BLACKBERRY PREFERENCES -->
+		
+	<preference name="disable-cursor" value="false" />
+		
+	<!-- PHONEGAP API FEATURES PREFERENCES -->
+		
+	<preference name="permissions" value="none"/>
+	
+	<!-- PLATAFORMAS -->
+	
+	<!-- <gap:platform name="ios" /> -->
+	<gap:platform name="android" />
+	<!-- <gap:platform name="webos" /> -->
+	<!-- <gap:platform name="symbian" /> -->
+	<!-- <gap:platform name="blackberry" /> -->
+	<!-- <gap:platform name="winphone" /> -->
+
+
+</widget>

@@ -1,0 +1,55 @@
+
+link(rel='stylesheet', href='css/navHeader.min.css')
+
+nav.header 
+	div.rayas
+			span
+			span
+			span
+
+	ul
+		li.penitencias 
+			span
+			| Penitencias
+		li.juguemos 
+			span
+			| Juguemos
+		li.creditos 
+			span
+			| Creditos
+
+	div.circulo
+		img( src='../imagenes/menuBottom.png' )
+
+	script.
+
+		// CIRCULO MENU
+		$( "nav .circulo , nav .rayas, nav.header ul li" ).click(function(){
+			//- EXPANDE Y CONTRAE EL CIRCULO
+			$( "nav .circulo" ).toggleClass( "grande" );
+			$( "nav .rayas" ).toggleClass( "cerrar" );
+			//- SI SE EXPANDE VUELVE EN X LAS RAYAS DEL MENU
+			if( $( "nav .circulo" ).hasClass( "grande" ) ) {
+				$( "nav.header ul" ).addClass( "mostrar" );
+				$( "body" ).addClass( "overflowHidden" );
+			} else {
+				$( "nav.header ul" ).removeClass( "mostrar" );
+				$( "body" ).removeClass( "overflowHidden" );
+			};
+		});
+
+		// MARCA COMO ACTIVO DEPENDIENDO LA PAGINA DONDE ESTAMOS
+		$( "nav.header ul li" ).click(function(){
+			$( "nav.header ul li" ).removeClass( "activo" );
+			$( this ).addClass( "activo" );
+		});
+
+		// MUESTRA LA PAGINA SELECCIONADA
+		$( "nav.header ul li" ).click(function(){
+			$( "body > div" ).hide();
+			var mContenido = $( this ).html().toLowerCase().split( "</span>" )[1];
+			setTimeout(function(){
+				$( "body > div." + mContenido ).fadeIn();
+			},100);
+		});
+

@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+$c 			: #cccccc;
+$tono1 		: #e74c3c;
+$tono3		: #9e1a13;
+$imagenes	: "../imagenes";
+
+@mixin overflow($propiedad) {
+	overflow: $propiedad;
+}
+@mixin transicion($transition) {
+	-webkit-transition: all $transition ease;
+	-moz-transition:    all $transition ease;
+	-o-transition:      all $transition ease;
+	transition:         all $transition ease;
+}
+@mixin bordes($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin rotar($rotacion) {
+	-webkit-transform: rotate($rotacion);
+	-moz-transform: rotate($rotacion);
+	-ms-transform: rotate($rotacion);
+	-o-transform: rotate($rotacion);
+}
+@mixin degradado($fromColor, $toColor) {
+	background: $tono1; 
+	background: -moz-linear-gradient(top, $tono1 0%, $tono3 100%); 
+	background: -webkit-linear-gradient(top, $tono1 0%, $tono3 100%); 
+	background: linear-gradient(to bottom, $tono1 0%, $tono3 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$tono1}', endColorstr='#{$tono3}',GradientType=0 ); 
+}

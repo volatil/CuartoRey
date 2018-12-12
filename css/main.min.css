@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+body {
+  background: #e74c3c;
+  font-family: 'Roboto', sans-serif;
+  color: white; }
+
+body.overflowHidden {
+  overflow: hidden; }
+
+body > div {
+  display: none; }
+
+body > div > h1 {
+  text-align: center;
+  font-size: 9vw;
+  letter-spacing: 0.05em; }
+
+body > div.penitencias {
+  display: block; }
+
+input.elegir {
+  height: 40px;
+  position: absolute;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-transform: capitalize;
+  letter-spacing: .05em;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1.8em;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: #9e1a13; }
+
+.juguemos .elegida {
+  display: none;
+  text-align: center; }
+
+.juguemos .elegida .imagen {
+  margin-top: 20px; }
+
+.juguemos .elegida .imagen img {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block; }
+
+.pinta {
+  display: none; }
+
+.cartas {
+  display: none; }
+
+.cartas p {
+  font-size: 0.7em;
+  width: 100px;
+  background: whitesmoke;
+  height: 40px;
+  margin: 0 5px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 2.6em; }
+
+.cartas p.cartaActiva {
+  background: green;
+  opacity: 1; }

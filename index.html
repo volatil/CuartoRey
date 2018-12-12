@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cuarto Rey</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="shortcut icon" href="./icon.jpg">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="css/navHeader.min.css">
+    <nav class="header"> 
+      <div class="rayas"><span></span><span></span><span></span></div>
+      <ul>
+        <li class="penitencias"> <span></span>Penitencias</li>
+        <li class="juguemos"> <span></span>Juguemos</li>
+        <li class="creditos"> <span></span>Creditos</li>
+      </ul>
+      <div class="circulo"><img src="../imagenes/menuBottom.png"></div>
+      <script>
+        // CIRCULO MENU
+        $( "nav .circulo , nav .rayas, nav.header ul li" ).click(function(){
+        	//- EXPANDE Y CONTRAE EL CIRCULO
+        	$( "nav .circulo" ).toggleClass( "grande" );
+        	$( "nav .rayas" ).toggleClass( "cerrar" );
+        	//- SI SE EXPANDE VUELVE EN X LAS RAYAS DEL MENU
+        	if( $( "nav .circulo" ).hasClass( "grande" ) ) {
+        		$( "nav.header ul" ).addClass( "mostrar" );
+        		$( "body" ).addClass( "overflowHidden" );
+        	} else {
+        		$( "nav.header ul" ).removeClass( "mostrar" );
+        		$( "body" ).removeClass( "overflowHidden" );
+        	};
+        });
+        
+        // MARCA COMO ACTIVO DEPENDIENDO LA PAGINA DONDE ESTAMOS
+        $( "nav.header ul li" ).click(function(){
+        	$( "nav.header ul li" ).removeClass( "activo" );
+        	$( this ).addClass( "activo" );
+        });
+        
+        // MUESTRA LA PAGINA SELECCIONADA
+        $( "nav.header ul li" ).click(function(){
+        	$( "body > div" ).hide();
+        	var mContenido = $( this ).html().toLowerCase().split( "</span>" )[1];
+        	setTimeout(function(){
+        		$( "body > div." + mContenido ).fadeIn();
+        	},100);
+        });
+      </script>
+    </nav>
+    <link rel="stylesheet" href="css/penitencias.min.css">
+    <div class="penitencias">
+      <h1>Penitencias</h1>
+      <ul>
+        <li>
+          <label>Carta <strong>A</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>2</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>3</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>4</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>5</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>6</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>7</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>8</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>9</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>10</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>J</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>Q</strong></label>
+          <input type="text">
+        </li>
+        <li>
+          <label>Carta <strong>K</strong></label>
+          <input type="text">
+        </li>
+      </ul>
+    </div>
+    <link rel="stylesheet" href="css/creditos.min.css">
+    <div class="creditos">
+      <h1>Creditos</h1>
+      <p>Al igual que tu, soy un humano borracho y necesitaba hacer este juego más comodo.</p>
+      <p>Si puedes, ayudame valorando esta app con 5 estrellitas.</p>
+      <p>¡Salud!</p>
+      <input type="button" value="Valorar">
+    </div>
+    <div class="juguemos">
+      <div class="cartas"></div>
+      <div class="pinta">corazones</div>
+      <input class="elegir" type="button" value="Elegir">
+      <div class="elegida">Carta elegida <strong>...</strong>
+        <div class="imagen"></div>
+      </div>
+      <script src="js/vendor.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.cartas p {
+  font-size: 0.7em;
+  width: 100px;
+  background: whitesmoke;
+  height: 40px;
+  margin: 0 5px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 2.6em;
+}
+
+.cartas p.cartaActiva {
+  background: green;
+  opacity: 1;
+}

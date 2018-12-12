@@ -1,0 +1,133 @@
+@import 'variables';
+
+nav.header {
+	width: 100%;
+	height: 50px;
+}
+nav.header .rayas {
+	background: transparent;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	z-index: 3;
+}
+nav.header .rayas span {
+	background: white;
+	height: 5px;
+	position: absolute;
+	top: 0;
+	left: -5px;
+	display: block;
+	width: 60%;
+	margin: 5px 0 0 20px;
+	@include transicion( .2s )
+}
+nav.header .rayas span:nth-child(1) {
+	top: 10px;
+}
+nav.header .rayas span:nth-child(2) {
+	top: 20px;
+}
+nav.header .rayas span:nth-child(3) {
+	top: 30px;
+}
+nav.header .rayas.cerrar span:nth-child(1) {
+	@include rotar( -45deg );
+	top: 20px;
+}
+nav.header .rayas.cerrar span:nth-child(2) {
+	display: none;
+}
+nav.header .rayas.cerrar span:nth-child(3) {
+	@include rotar( 45deg );
+	top: 20px;
+}
+nav.header ul {
+	display: none;
+	position: relative;
+	z-index: 3;
+}
+nav.header ul.mostrar {
+	display: block;
+}
+nav.header ul li {
+	margin: 20px 0;
+	color: white;
+	text-decoration: none;
+	letter-spacing: .03em;
+	font-weight: 300;
+	font-size: 7.8vw;
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+nav.header ul li.activo {
+	opacity: .5;
+}
+nav.header ul li span {
+	background: url(#{$imagenes}/sprite.png) no-repeat;
+	display: inline-block;
+	margin-right: 6px;
+	position: relative;
+	top: 3px;
+}
+nav.header ul li.penitencias span {
+	background-position: 0px 0px;
+	width: 21px;
+	height: 21px;
+}
+nav.header ul li.juguemos span {
+	background-position: -22px 0px;
+	width: 19px;
+	height: 21px;
+}
+nav.header ul li.creditos span {
+	background-position: -41px 0px;
+	width: 26px;
+	height: 21px;
+}
+nav.header .circulo {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 75px;
+	height: 75px;
+	overflow: hidden;
+	background: $tono3;
+	@include bordes(50%);
+	@include transicion( .2s );
+}
+nav.header .circulo span {
+	background: white;
+	height: 4px;
+	position: absolute;
+	border-radius: 20px;
+	top: 0;
+	left: -5px;
+	display: block;
+	width: 100%;
+}
+nav.header .circulo p {
+	color: white;
+	text-align: center;
+}
+nav.header .circulo.grande {
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	z-index: 2;
+	@include bordes( 0px );
+	@include degradado(#e74c3c, #9e1a13);
+}
+nav.header .circulo img {
+	display: none;
+}
+nav.header .circulo.grande img {
+	display: block;
+	position: absolute;
+	width: 120%;
+	left: -4%;
+	bottom: -40px;
+}

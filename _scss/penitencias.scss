@@ -1,0 +1,31 @@
+@import 'variables';
+
+div.penitencias {}
+div.penitencias > ul {
+	margin: 0;
+}
+div.penitencias > ul > li {
+	list-style: none;
+	position: relative;
+	height: 40px;
+	margin-bottom: 20px;
+}
+div.penitencias > ul > li > label {
+	position: absolute;
+	z-index: 1;
+	background: #e74c3c;
+	margin: -10px 0 0 5px;
+	font-size: 0.9em;
+	padding: 1px 7px;
+}
+div.penitencias > ul > li > input {
+	position: absolute;
+	padding: 10px;
+	background: #e74c3c;
+	border: 1px solid #ce3323;
+	color: white;
+	outline: none;
+}
+div.penitencias > ul > li > input:focus {
+	border: 1px solid white;
+}

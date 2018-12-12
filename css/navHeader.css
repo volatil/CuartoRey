@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+nav.header {
+  width: 100%;
+  height: 50px; }
+
+nav.header .rayas {
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 3; }
+
+nav.header .rayas span {
+  background: white;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  display: block;
+  width: 60%;
+  margin: 5px 0 0 20px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+nav.header .rayas span:nth-child(1) {
+  top: 10px; }
+
+nav.header .rayas span:nth-child(2) {
+  top: 20px; }
+
+nav.header .rayas span:nth-child(3) {
+  top: 30px; }
+
+nav.header .rayas.cerrar span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  top: 20px; }
+
+nav.header .rayas.cerrar span:nth-child(2) {
+  display: none; }
+
+nav.header .rayas.cerrar span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  top: 20px; }
+
+nav.header ul {
+  display: none;
+  position: relative;
+  z-index: 3; }
+
+nav.header ul.mostrar {
+  display: block; }
+
+nav.header ul li {
+  margin: 20px 0;
+  color: white;
+  text-decoration: none;
+  letter-spacing: .03em;
+  font-weight: 300;
+  font-size: 7.8vw;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative; }
+
+nav.header ul li.activo {
+  opacity: .5; }
+
+nav.header ul li span {
+  background: url(../imagenes/sprite.png) no-repeat;
+  display: inline-block;
+  margin-right: 6px;
+  position: relative;
+  top: 3px; }
+
+nav.header ul li.penitencias span {
+  background-position: 0px 0px;
+  width: 21px;
+  height: 21px; }
+
+nav.header ul li.juguemos span {
+  background-position: -22px 0px;
+  width: 19px;
+  height: 21px; }
+
+nav.header ul li.creditos span {
+  background-position: -41px 0px;
+  width: 26px;
+  height: 21px; }
+
+nav.header .circulo {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  background: #9e1a13;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+nav.header .circulo span {
+  background: white;
+  height: 4px;
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  left: -5px;
+  display: block;
+  width: 100%; }
+
+nav.header .circulo p {
+  color: white;
+  text-align: center; }
+
+nav.header .circulo.grande {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  background: #e74c3c;
+  background: -moz-linear-gradient(top, #e74c3c 0%, #9e1a13 100%);
+  background: -webkit-linear-gradient(top, #e74c3c 0%, #9e1a13 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e74c3c), to(#9e1a13));
+  background: -o-linear-gradient(top, #e74c3c 0%, #9e1a13 100%);
+  background: linear-gradient(to bottom, #e74c3c 0%, #9e1a13 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e74c3c', endColorstr='#9e1a13',GradientType=0 ); }
+
+nav.header .circulo img {
+  display: none; }
+
+nav.header .circulo.grande img {
+  display: block;
+  position: absolute;
+  width: 120%;
+  left: -4%;
+  bottom: -40px; }
